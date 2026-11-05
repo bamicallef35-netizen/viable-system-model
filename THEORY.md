@@ -1,6 +1,6 @@
 # Theory — every construct, and where it comes from
 
-The point of this file is that an interviewer can pick any line of the code and trace it to a page. Where a construct is my operationalization rather than Beer's or Ashby's, it says so.
+The point of this file is that an interviewer can pick any line of the code and trace it to a page. Where a construct is my operationalization, with no source in Beer or Ashby, it says so.
 
 | Construct | In the code | Source |
 |---|---|---|
