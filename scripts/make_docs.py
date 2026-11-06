@@ -37,7 +37,8 @@ page = f"""<!doctype html>
   </header>
 
   <figure class="demo">
-    <pre class="readout" style="padding: var(--s-3); border: 0; white-space: pre; font-size: var(--fs-0); line-height: 1.5;">{html.escape(demo())}</pre>
+    <figure class="sheet"><img src="./vsm.svg" alt="the factory example drawn by the library: the recursion as nested frames, each level's five functions, requisite variety per plant, and the alarm's route to System 5"><figcaption>the model, drawn by the library from the same objects the text below reports: a frame for each viable system with its functions 2, 3, 3*, 4, 5; a bar per leaf for actuality, capability and potentiality; requisite variety per plant; the algedonic route of the alarm.</figcaption></figure>
+  <pre class="readout" style="padding: var(--s-3); border: 0; white-space: pre; font-size: var(--fs-0); line-height: 1.5;">{html.escape(demo())}</pre>
     <figcaption>a three-level factory: the recursion and its functions; Ashby's requisite-variety test per plant; Beer's variety engineering bringing the short plant into balance; the algedonic alarm escalating from line-S2 to the top; and a structurally broken system flagged.</figcaption>
   </figure>
 

@@ -55,6 +55,12 @@ ALGEDONIC CHANNEL  threshold 0.6  timeout 3 readings
 ALGEDONIC  t=4  line-S2  productivity 0.47  via Plant South -> Company
 ```
 
+## The sheet
+
+`vsm.sheet.sheet(root, requisite_rows, events)` draws a model as an SVG sheet from the same objects the text renderer reports: each viable system as a frame carrying its functions 2, 3, 3*, 4 and 5 (a missing one marked in the accent), its operational units side by side with any nested system drawn inside them, one bar per leaf for actuality, capability and potentiality, the requisite-variety test per named system as two bars with the shortfall in the accent, and every alarm as a dashed route from its unit straight to System 5. The title block is in the scenario format. `scripts/make_docs.py` writes it to [`docs/vsm.svg`](docs/vsm.svg) beside the page.
+
+![The factory example, drawn by the library](docs/vsm.svg)
+
 ## Tests
 
 `pytest` runs unit tests plus two Hypothesis property tests: that `requisite` satisfies Ashby's bound for all non-negative inputs, and that `propagate` emits exactly one alarm per maximal run of low readings of length at least the timeout, checked against an independent counter. `mypy --strict` and `ruff` run in CI across Python 3.11–3.13.

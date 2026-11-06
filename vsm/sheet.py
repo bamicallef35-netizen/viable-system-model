@@ -183,7 +183,7 @@ def sheet(
                       + (f"an alarm escalates straight to System 5 when productivity stays below {threshold} for {timeout} readings (Beer's algedonic channel)" if threshold is not None else "alarms escalate straight to System 5 (Beer's algedonic channel)")),
         ("record", f"structurally viable: {'yes' if root.is_structurally_viable() else 'no'} / "
                    f"{'short of variety: ' + ', '.join(short) if short else 'every regulator requisite'} / "
-                   f"{len(events)} alarms{' from ' + ', '.join(alarmed) if alarmed else ''}"),
+                   f"{len(events)} alarm{'' if len(events) == 1 else 's'}{' from ' + ', '.join(alarmed) if alarmed else ''}"),
     ]
     ty = my + meter_h + 30
     body += f'<line x1="{pad}" y1="{ty - 14}" x2="{pad + width}" y2="{ty - 14}" stroke="{RULE}"/>'
