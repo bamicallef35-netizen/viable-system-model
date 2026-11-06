@@ -10,10 +10,16 @@ from __future__ import annotations
 import html
 from pathlib import Path
 
-from vsm.cli import demo
+from vsm import examples
+from vsm.algedonic import propagate
+from vsm.cli import THRESHOLD, TIMEOUT, demo
+from vsm.sheet import sheet
 
 ROOT = Path(__file__).resolve().parent.parent
 out = ROOT / "docs" / "index.html"
+root = examples.factory()
+events = propagate(root, examples.factory_readings(), threshold=THRESHOLD, timeout=TIMEOUT)
+(ROOT / "docs" / "vsm.svg").write_text(sheet(root, examples.factory_requisite(), events, threshold=THRESHOLD, timeout=TIMEOUT))
 page = f"""<!doctype html>
 <html lang="en">
 <head>
