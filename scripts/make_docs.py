@@ -43,9 +43,9 @@ page = f"""<!doctype html>
   </figure>
 
   <section class="text">
-    <h2>what this can and cannot prove</h2>
-    <p>It can demonstrate the internal logic of the VSM as Beer specified it; compute Ashby's variety and the requisite-variety inequality exactly over a finite state space you stipulate; show, by test, that an algedonic alarm propagates up the recursion exactly when the model's own rule says it should; and serve as an executable, cited glossary of cybernetic regulation.</p>
-    <p>It cannot prove any real organization is viable or predict its behaviour, validate the VSM as a theory of organizations, control any robot, or measure real-world variety. The algedonic rule — a threshold held for a timeout — is my operationalization; Beer described the channel and wrote no algorithm.</p>
+    <h2>scope</h2>
+    <p>It can demonstrate the internal logic of the VSM as Beer specified it; compute Ashby's variety and the requisite-variety inequality exactly over a finite state space you stipulate; show, by test, that an algedonic alarm propagates up the recursion exactly when the model's own rule says it should; and work as a runnable, cited reference for these ideas.</p>
+    <p>It cannot prove any real organization is viable or predict its behaviour, validate the VSM as a theory of organizations, control any robot, or measure real-world variety. The algedonic rule (a threshold held for a timeout) is my operationalization; Beer described the channel and wrote no algorithm.</p>
     <p class="meta">42 tests, two of them Hypothesis properties / mypy --strict / zero runtime dependencies / MIT / <a href="https://github.com/bamicallef35-netizen/viable-system-model">README, THEORY.md and citations</a></p>
   </section>
 </main>
