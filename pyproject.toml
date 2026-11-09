@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "viable-system-model"
+version = "0.1.0"
+description = "An executable, cited model of Stafford Beer's Viable System Model, with Ashby's variety mathematics done exactly."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "Ben Micallef" }]
+dependencies = []
+keywords = ["cybernetics", "viable system model", "stafford beer", "ashby", "requisite variety"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "hypothesis>=6", "mypy>=1.10", "ruff>=0.5"]
+
+[project.urls]
+Repository = "https://github.com/bamicallef35-netizen/viable-system-model"
+
+[tool.setuptools.packages.find]
+include = ["vsm*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.mypy]
+strict = true
+files = ["vsm", "tests", "examples"]
+warn_unreachable = true
+
+[tool.ruff]
+line-length = 110
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+
+[tool.ruff.lint.per-file-ignores]
+"scripts/make_docs.py" = ["E501"]   # the page template is one long string
+"vsm/sheet.py" = ["E501"]           # SVG f-strings read better unwrapped
